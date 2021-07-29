@@ -1,4 +1,5 @@
 //1
+/*
 let array   //declara a variavel array, porém não atribui nenhum valor
 console.log('a. ', array) //imprimirá a. undefined
 
@@ -50,18 +51,24 @@ const comidaUsuario = prompt("Qual é a sua comida preferida?")
 let u = 0
 comidaFavorita[u+1]= comidaUsuario
 console.log(comidaFavorita)
+*/
 
 //3. Faça um programa, seguindo os passos:
 //a) Crie um array vazio e guarde-o em uma variável, chamada `listaDeTarefas`
-let listaDeTarefas 
+const listaDeTarefas = []
 //b) Pergunte ao usuário 3 tarefas que ele precise realizar no dia e armazene-as, uma por uma, no array
-listaDeTarefas = prompt(["Digite uma tarefas para realizar no dia"])
-let segundaTarefa = prompt(["Digite sua segunda tarefa para realizar no dia"])
-let terceiraTarefa = prompt(["Digite sua terceira tarefa para realizar no dia"])
-//c) Imprima o array na tela
-console.log(listaDeTarefas,segundaTarefa, terceiraTarefa)
-//d) Peça ao usuário que digite o **índice** de uma tarefa que ele já realizou: 0, 1 ou 2 
-const índice = prompt("Digite o indice da uma atividade que já realizou (0, 1 ou 2)")
-//e) Remova da lista o item de índice que o usuário escolheu.
+const primeiraTarefa = prompt("Digite uma tarefas para realizar no dia")
+const segundaTarefa = prompt("Digite sua segunda tarefa para realizar no dia")
+const terceiraTarefa = prompt("Digite sua terceira tarefa para realizar no dia")
 
+listaDeTarefas.push = primeiraTarefa
+listaDeTarefas.push = segundaTarefa
+listaDeTarefas.push = terceiraTarefa
+//c) Imprima o array na tela
+console.log(listaDeTarefas)
+//d) Peça ao usuário que digite o **índice** de uma tarefa que ele já realizou: 0, 1 ou 2 
+const indice = prompt("Digite o indice da uma atividade que já realizou (0, 1 ou 2)")
+//e) Remova da lista o item de índice que o usuário escolheu.
+listaDeTarefas.splice(Number(indice), 1)
 //f) Imprima o array na tela
+console.log(listaDeTarefas)
