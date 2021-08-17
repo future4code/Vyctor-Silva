@@ -6,32 +6,65 @@ function inverteArray(array) {
   return meuArrayInvertido
  
 }
-inverteArray([0,8,23,16,10,15,41,12,13])
+
 
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
+  let novoArray = []
+  for (let i = 0;i < array.length;i++) {
+    if (array[i] % 2 === 0) {
+      novoArray.push(array[i] * array[i])
+    }
+  }
+  return novoArray
 }
 
 
 
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
-
+  let arrayPar = array
+  let numerosPares = arrayPar.filter((item, indice, array) => {
+  return item % 2 === 0     
+  })
+  return numerosPares
 }
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
-
+  let arrayMaior = 0
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] > arrayMaior){
+      arrayMaior = array[i]
+    }
+  }
+  return arrayMaior
 }
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
-  
+  let arrayElementos = array
+  return arrayElementos.length
 }
 
 // EXERCÍCIO 06
 function retornaExpressoesBooleanas() {
+  //const booleano1 = true
+  //const booleano2 = false
+  //const booleano3 = !booleano2 = true
+  //const booleano4 = !booleano3 = false
+//a) `booleano1 && booleano2 && !booleano4` 
+
+//b) `(booleano1 && booleano2)false || false !booleano3` 
+
+//c)  `(booleano2 || booleano3) true && true (booleano4 || booleano1) 
+
+//d) `!(booleano2 && booleano3) true || false!(booleano1 && booleano3)` 
+
+//e) `!(booleano1) && !(booleano3)false || true (!booleano4 && booleano3 && booleano3)`
+ const array = [false, false, true, true, true ]
+ return array
 
 }
 
