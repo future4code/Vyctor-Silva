@@ -70,8 +70,13 @@ function retornaExpressoesBooleanas() {
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
-  
-
+  const arrayNovo = []
+  for(let numero= 0; arrayNovo.length < n; i++){
+        if(numero % 2 === 0){
+        arrayNovo.push(numero)
+       }
+  }
+  return arrayNovo
 }
 
 // EXERCÍCIO 08
@@ -79,6 +84,13 @@ function checaTriangulo(a, b, c) {
   // return 'Escaleno'
   // return 'Equilátero'
   // return 'Isósceles'
+  if(a === b && b=== c ){
+    return "Equilátero"
+  }else if(a === b && b !== c){
+    return "Isósceles" 
+  }else if(a !== b && b !== c){
+    return "Escaleno"
+  }
 }
 
 // EXERCÍCIO 09
