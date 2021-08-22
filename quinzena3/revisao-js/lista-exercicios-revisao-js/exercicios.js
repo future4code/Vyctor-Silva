@@ -204,6 +204,7 @@ function criaRetangulo(lado1, lado2) {
     area: lado1 * lado2
   }
 
+  
   return retangulo
 }
 
@@ -212,7 +213,7 @@ function criaRetangulo(lado1, lado2) {
 function anonimizaPessoa(pessoa) {
  return {...pessoa,
          nome: "ANÔNIMO"
-         
+
  }
 }
 
