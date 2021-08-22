@@ -212,6 +212,7 @@ function criaRetangulo(lado1, lado2) {
 function anonimizaPessoa(pessoa) {
  return {...pessoa,
          nome: "ANÔNIMO"
+         
  }
 }
 
