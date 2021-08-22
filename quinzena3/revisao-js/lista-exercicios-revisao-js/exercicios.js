@@ -163,7 +163,11 @@ function segundoMaiorEMenor(array) {
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-
+  let arrayNormal = array.length
+ for(let i = 0; i <= arrayNormal; i++){
+   arrayNormal = arrayNormal[i]
+ }
+ return bubble_Sort(arrayNormal)
 }
 
 // EXERCÍCIO 12
