@@ -34,7 +34,12 @@ div>p:first-child {
 }
 
 div img {
-    background: black;
+    color: black;
+    background-color: white;    
+}
+
+.icone {
+    width: auto;
 }
 
 .botao-amarelo {
