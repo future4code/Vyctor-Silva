@@ -106,6 +106,13 @@ div img {
   *
   **/
 
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 5px
+}
+
 table{
     margin: auto;
 }
