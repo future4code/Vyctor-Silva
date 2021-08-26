@@ -70,6 +70,7 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    padding-top: 50px;
 }
 
 #container-de-descricao>ol {
@@ -116,7 +117,8 @@ td button {
 }
 
 
-.back-button {
+
+#back-button {
     background-color: white;
     width: 100px;
     height: 20px;
