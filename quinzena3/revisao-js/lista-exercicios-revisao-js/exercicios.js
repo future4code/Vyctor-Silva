@@ -70,15 +70,24 @@ function retornaExpressoesBooleanas() {
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
-  
-
+  const arrayNovo = []
+  for(let numero= 0; arrayNovo.length < n; i++){
+        if(numero % 2 === 0){
+        arrayNovo.push(numero)
+       }
+  }
+  return arrayNovo
 }
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
-  // return 'Escaleno'
-  // return 'Equilátero'
-  // return 'Isósceles'
+  if(a === b && b=== c ){
+    return "Equilátero"
+  }else if(a === b && b !== c){
+    return "Isósceles" 
+  }else if(a !== b && b !== c){
+    return "Escaleno"
+  }
 }
 
 // EXERCÍCIO 09
@@ -89,36 +98,123 @@ function comparaDoisNumeros(num1, num2) {
   //   maiorDivisivelPorMenor: Y,
   //   diferenca: Z
   // }
-}
+  
+  let maiorNumero = 0
+  let menorNumero = 0
+  let divisivel = 0
+  let diferença = 0
+
+  if (num1 > num2){
+    maiorNumero = num1
+    menorNumero = num2
+  }else{
+    maiorNumero = num2
+    menorNumero = num1
+  }
+
+  divisivel = maiorNumero % menorNumero === 0
+
+  diferença = maiorNumero - menorNumero
+
+  return {
+    maiorNumero: maiorNumero,
+    maiorDivisivelPorMenor:  divisivel,
+    diferenca: diferença,
+  }
+
+
+} 
+
+
+
+
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
+  let menor = Infinity
+  let maior = -Infinity
+  let segundoMenor = Infinity
+  let segundoMaior = -Infinity
+  let novoArray = []
+
+  for (let i of array) {
+    if (i < menor) {
+      menor = i
+    }
+    if (i > maior) {
+      maior = i
+    }
+  }
+
+  for (let i of array) {
+    if (i < segundoMenor && i !== menor) {
+      segundoMenor = i
+    }
+    if (i > segundoMaior && i !== maior) {
+      segundoMaior = i
+    }
+  }
+  novoArray.push(segundoMaior)
+  novoArray.push(segundoMenor)
+
+  return novoArray
 
 }
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-
+  let arrayNormal = array.length
+ for(let i = 0; i <= arrayNormal; i++){
+   arrayNormal = arrayNormal[i]
+ }
+ return bubble_Sort(arrayNormal)
 }
 
 // EXERCÍCIO 12
 function filmeFavorito() {
+  const filme = {
+    nome: "O Diabo Veste Prada",
+    ano: 2006,
+    diretor: "David Frankel",
+    atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+  }
 
+  return filme
 }
 
 // EXERCÍCIO 13
 function imprimeChamada() {
   // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
+  const filme = {
+    nome: "O Diabo Veste Prada",
+    ano: 2006,
+    diretor: "David Frankel",
+    atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+  }
+
+  return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}`
 }
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
+  const retangulo = {
+    largura: lado1,
+    altura: lado2,
+    perimetro: 2 * (lado1 + lado2),
+    area: lado1 * lado2
+  }
 
+  
+  return retangulo
 }
+
 
 // EXERCÍCIO 15
 function anonimizaPessoa(pessoa) {
+ return {...pessoa,
+         nome: "ANÔNIMO"
 
+ }
 }
 
 // EXERCÍCIO 16A
