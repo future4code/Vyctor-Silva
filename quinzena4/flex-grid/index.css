@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.superior{
+    display: flex;
+    height: 5vh;
+    background-color: mediumvioletred;
+    align-items: center;
+    padding: 9px 2px;
+}
+
+ img, h2{
+    margin-left: 15px;
+}
+
+img{
+    height: 20px;
+     
+}
+
+button{
+    margin-left: 80vw;
+    height: 20px; 
+} 
+
+main{
+    display: flex;
+    
+    
+}
+
+#menu{
+    background-color: #f2d0e0;
+    flex-grow: 2;   
+}
+
+.home{
+    display: inline;
+    
+}
+
+selection{
+    border: 5px solid black;
+}
+
+
+
+#bolos{
+    background-color: rgb(2, 230, 2);
+    flex-grow: 10;
+}
