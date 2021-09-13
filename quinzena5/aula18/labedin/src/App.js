@@ -1,23 +1,87 @@
 import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
+import CardPequeno from './components/CardPequeno/CardPequeno';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import styled from 'styled-components';
+
+const Minhaimagem = require('./img/Imagem/minhaimagem.jpeg')
+
+// estilização CardGrande
+// const estilizaçãoCardGrande = styled.div`
+//    display: flex;
+//    align-items: center;
+//    border: 1px solid black;
+//    padding: 20px 10px;
+//    margin-bottom: 10px;
+//    height: 200px;
+ 
+//  img{
+//     width: 70px;
+//     margin-right: 10px;
+//     border-radius: 50%;
+//  }  
+
+//  h4{
+//     margin-bottom: 15px;
+//  }
+
+//  div{
+//     display: flex;
+//     flex-direction: column;
+//     justify-items: flex-start;
+//  }
+ 
+// `
+
+// estilização CardPequeno
+// const estilizaçãoCardPequeno = styled.p`
+//   border: 1px solid black;
+//   padding: 20px;
+// `
+
+// estilização ImagemButton
+// const estilizaçãoImagemButton = styled.div`
+//     display: flex;
+//     align-items: center;
+//     border: 1px solid black;
+//     border-radius: 50px;
+//     width: 200px;
+//     padding: 15px 30px;
+//     margin: 10px auto;
+ 
+// img{
+//     width: 30px;
+//     margin-right: 10px;
+//  }
+// `
+
+// Não consegui pensar em um jeito de estilizar usando styled-components, pois se eu colocar a minha tag estilizada, irei 
+// retirar a tag com os props
+
 
 function App() {
   return (
     <div className="App">
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
+        
+        
         <CardGrande 
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
-          nome="Astrodev" 
-          descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+          imagem={Minhaimagem} 
+          nome="Vyctor Pierre" 
+          descricao="Oi, eu sou o Vyctor. Sou aluno da Labenu. Atualmente trabalho na Oi S.A na gerencia de aprovisionamento de dados, mas pretendo migrar para area de programação"
         />
         
         <ImagemButton 
           imagem="https://image.flaticon.com/icons/png/512/117/117472.png" 
           texto="Ver mais"
         />
+
+        <CardPequeno
+          email="Email: vyctorpierre2009@gmail.com"
+          endereço="Endereço: Av. Roberto Silveira nº: 1000"
+        />  
       </div>
 
       <div className="page-section-container">
