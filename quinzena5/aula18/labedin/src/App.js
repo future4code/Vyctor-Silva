@@ -7,57 +7,6 @@ import styled from 'styled-components';
 
 const Minhaimagem = require('./img/Imagem/minhaimagem.jpeg')
 
-// estilização CardGrande
-// const estilizaçãoCardGrande = styled.div`
-//    display: flex;
-//    align-items: center;
-//    border: 1px solid black;
-//    padding: 20px 10px;
-//    margin-bottom: 10px;
-//    height: 200px;
- 
-//  img{
-//     width: 70px;
-//     margin-right: 10px;
-//     border-radius: 50%;
-//  }  
-
-//  h4{
-//     margin-bottom: 15px;
-//  }
-
-//  div{
-//     display: flex;
-//     flex-direction: column;
-//     justify-items: flex-start;
-//  }
- 
-// `
-
-// estilização CardPequeno
-// const estilizaçãoCardPequeno = styled.p`
-//   border: 1px solid black;
-//   padding: 20px;
-// `
-
-// estilização ImagemButton
-// const estilizaçãoImagemButton = styled.div`
-//     display: flex;
-//     align-items: center;
-//     border: 1px solid black;
-//     border-radius: 50px;
-//     width: 200px;
-//     padding: 15px 30px;
-//     margin: 10px auto;
- 
-// img{
-//     width: 30px;
-//     margin-right: 10px;
-//  }
-// `
-
-// Não consegui pensar em um jeito de estilizar usando styled-components, pois se eu colocar a minha tag estilizada, irei 
-// retirar a tag com os props
 
 
 function App() {

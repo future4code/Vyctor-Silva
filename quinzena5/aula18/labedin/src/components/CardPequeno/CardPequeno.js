@@ -3,7 +3,7 @@ import './CardPequeno.css';
 
 function CardPequeno(props) {
     return (
-        <div >
+        <div className="littlecard-container">
             <p>{ props.email }</p>
             <p>{ props.endereço }</p>           
         </div>
