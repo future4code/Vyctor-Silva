@@ -35,27 +35,46 @@ class App extends React.Component {
     }
 
   componentDidUpdate() {
-
-  };
+   localStorage.setItem('tarefas',  JSON.stringify(this.state.tarefas))
+};
 
   componentDidMount() {
-
-  };
-
+    const tarefastring = localStorage.getItem('tarefas')
+    const tarefaArray = JSON.parse(tarefastring)  //Passar para array a Chave 'tarefas'
+    this.setState({tarefas: tarefaArray})   
+};
+  
   onChangeInput = (event) => {
-
-  }
+  this.setState({inputValue: event.target.value})
+};
 
   criaTarefa = () => {
-
+     const novaTarefa = {
+      id: Date.now(), // aqui, pode deixar o valor Date.now() para todas as tarefas as serem criadas
+      texto: this.state.inputValue, // aqui, o texto da tarefa virá do input controlado guardado no estado
+      completa: false // aqui, pode deixar o valor false para todas as tarefas as serem criadas, pq a tarefa sempre vai começar como não completa.
+    } 
+    const novaListaDeTarefa = [... this.state.tarefas, novaTarefa]
+    this.setState({tarefas: novaListaDeTarefa})
   }
 
   selectTarefa = (id) => {
-
+     const verificarTarefa = this.state.tarefas.map((tarefa) => {
+        if(id === tarefa.id){
+          const novaVerificarTarefa= {
+          ...tarefa,
+          completa: !tarefa.completa
+          }
+          return novaVerificarTarefa
+        }  else {
+           return tarefa
+        }
+     })
+     this.setState({tarefas: verificarTarefa})
   }
-
+ 
   onChangeFilter = (event) => {
-
+     this.setState({filtro: event.target.value})
   }
 
   render() {
