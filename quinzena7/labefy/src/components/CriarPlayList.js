@@ -29,6 +29,7 @@ export default class App extends React.Component {
       }
     })
     .then((resposta) =>{ //caso de certo (resposta)
+       console.log(resposta)
        alert("PlayList criada com sucesso!")
        this.setState({nomePlayList: ""})
     }) 

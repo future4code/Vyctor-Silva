@@ -25,20 +25,21 @@ export default class VisualizarPlayList extends React.Component {
         this.pegarPlayList()
     } 
     
-pegarPlayList = () => {
-    const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
-    axios.get (url,{
-        headers: {
-            Authorization: "vyctor-pierre-banu"
-        }
-    })
-    .then((resposta) => {
-       this.setState({todasPlayLists: resposta.data.result.list})
-    })
-    .catch((erro) => {
-       alert("Algo deu errado!")
-    })
-}
+    pegarPlayList = () => {
+        const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists";
+        axios.get(url, {
+            headers: {
+                Authorization: "vyctor-pierre-banu"
+            }
+        })
+        .then((resposta) => {
+                this.setState({ todasPlayLists: resposta.data.result.list });
+        })
+        .catch((erro) => {
+                alert("Algo deu errado!");
+        });
+    };
+    
 
 
 
@@ -64,7 +65,7 @@ deletarPlayList = (id) => {
        const listaAllPlayList = this.state.todasPlayLists.map((playlista) => {
         return <CardListaPlayList key= {playlista.id}> 
                     {playlista.name} 
-                    <button onClick= {() => this.deletarPlayList(playlista.id)}>X</button>
+                    <button onClick= {() => this.deletarPlayList(playlista.id)}>Apagar</button>
                 </CardListaPlayList>
        }) 
        
