@@ -1,7 +1,8 @@
 
-import TelaPrincipal  from "./TelaPrincipal";
-import TelaMatchs from "./TelaMatchs";
+import TelaPrincipal  from "./Pages/TelaPrincipal";
+import TelaMatchs from "./Pages/TelaMatchs";
 import React, { useState }  from "react";
+// import axios from "axios";
 
 
 
@@ -22,17 +23,21 @@ export const App = () => {
   const onClickMudarTela = () => {
     if (Tela === "TelaPrincipal") {
       setTela("TelaMatchs");
-    } else {
+    }else {
       setTela("TelaPrincipal");
     }
 
   }
 
+  
+
+
+
   return (
     <div>
        {PaginaDeTela()}
        <button onClick= {onClickMudarTela}> {Tela === "TelaPrincipal"? " Ir para Matches" :" Ir para Home"}</button>
-       <button> Limpar Matches</button>
+       
     </div>
     
   );
