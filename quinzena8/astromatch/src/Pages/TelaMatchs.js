@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { ListItem, PerfilContainer, ContainerMatch, Botao, ImagemMatche } from "./styled"
+import { ListItem, PerfilContainer, ContainerMatch, Botao, ImagemMatche, Titulo, LetraNome } from "./styled"
 
 
 
@@ -47,19 +47,20 @@ const TelaMatchs = () => {
     return(
         
         <ContainerMatch>
-        {matches === [] ? <h1>Não houve Matches ainda!</h1>   :
+        
             <PerfilContainer>
+                <Titulo> Lista de Matches </Titulo>
                 {matches.map((match) => {
                     return (
                         <ListItem>
                             <ImagemMatche src={match.photo} alt="Imagem do perfil que deu match"/>
-                            <h4>{match.name}</h4>
+                            <LetraNome>{match.name}</LetraNome>
                         </ListItem>
                         )
                     })}
                     <Botao onClick= {() => limparTelaDeMatches()} > Limpar Matches</Botao>
             </PerfilContainer>
-        }    
+            
         </ContainerMatch>
         
     )

@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from "react";
 import axios from "axios";
-import { Conteiner, Imagem, CardMacth, Titulo, DivTitulo } from "./styled"
+import { Conteiner, Imagem, CardMacth, Titulo, DivTitulo, LetraNome } from "./styled"
 
  
 
@@ -65,8 +65,8 @@ const TelaPrincipal = () => {
                <Titulo> AstroMatch </Titulo>  <img src="https://img.icons8.com/ultraviolet/40/000000/matches.png" alt="Icone" />
             </DivTitulo>
             <Imagem src={perfilParaMatches.photo} alt= "Imagem dos Perfis para Match" ></Imagem>
-            <h2>{perfilParaMatches.name}, {perfilParaMatches.age}</h2>
-            <p>{perfilParaMatches.bio}</p>
+            <LetraNome>{perfilParaMatches.name}, {perfilParaMatches.age}</LetraNome>
+            <LetraNome>{perfilParaMatches.bio}</LetraNome>
             <div>
               <button onClick={escolhaSobrePerfil}  value={()=> escolhaButton(false)}>❌</button>
               <button onClick={escolhaSobrePerfil} value={()=> escolhaButton(true)}>💚</button>
