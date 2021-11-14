@@ -7,6 +7,7 @@ import { ListaPersonagem, Container, Nome } from "./styledList";
 
 
 
+
 function CharacterListPage (props) {
 
   const [characterList, setCharacterList] = useState([]);
@@ -21,28 +22,33 @@ function CharacterListPage (props) {
     .then((resposta) => {
         setCharacterList(resposta.data.results)
      })
-     .catch((erro) => {
+    .catch((erro) => {
         alert("Algo deu errado")
      })    
   }
 
-
+  console.log(characterList)
 
 
 
 
  return(
-      <Container>
-        <h1>Lista de Personagens</h1>
-        {characterList.map((personagem) => {
-            return (
-              <ListaPersonagem key={personagem.url} onClick={() => props.goToDetailsPage(personagem.url)}>
-               <Nome> {personagem.name}</Nome>
-              </ListaPersonagem>
-            )
-        })}
-
-      </Container>
+    
+  
+    <Container>
+          
+            <h1>Lista de Personagens</h1>  
+              {characterList.map((personagem) => {
+                return (
+                    <ListaPersonagem key={personagem.url} onClick={() => props.goToDetailsPage(personagem.url)}>
+                        <Nome> {personagem.name}</Nome>
+                    </ListaPersonagem>
+                  )
+              })} 
+        
+            
+         
+    </Container> 
  )
 
 }

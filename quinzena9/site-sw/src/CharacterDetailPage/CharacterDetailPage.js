@@ -14,17 +14,7 @@ function CharacterDetailPage (props) {
 
 
  useEffect(() => {
-    const getPlanetDetails = () => {
-      axios.get(details.homeworld)
-      .then((resposta) => {
-          setPlanet(resposta.data)
-    })
-      .catch((erro) => {
-          alert("Houve algo de errado")
-    })
-  }
-
-  getPlanetDetails()
+   getPlanetDetails()
  }, [details])
 
  
@@ -38,8 +28,18 @@ function CharacterDetailPage (props) {
       alert("Algo deu errado")
      })    
   }
+  
 
-
+  const getPlanetDetails = async () => {
+    try {
+        const response = await axios.get(details.homeworld)
+        
+        setPlanet(response.data)
+      } catch(error) {
+        console.log(error)
+      }
+  }
+    
 
 
  return(
